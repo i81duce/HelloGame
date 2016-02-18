@@ -22,7 +22,7 @@ public class HelloGame extends ApplicationAdapter {
 
 	@Override
 	public void render () { // where the magic happens!! This is run many many times
-		move();
+		move(); // calls the move() method
 
 		Gdx.gl.glClearColor(1, 0, 0, 1); // clears last frame
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); // clears last frame
@@ -31,7 +31,7 @@ public class HelloGame extends ApplicationAdapter {
 		batch.end(); // ends frame
 	}
 
-	float decelerate(float velocity) {
+	float decelerate(float velocity) { //
 		float deceleration = 0.99f; // the closer to 1, the slower the deceleration;
 		velocity *= deceleration;
 		if (Math.abs(yv) < 1) {
